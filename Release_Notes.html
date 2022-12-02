@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Release Notes for FP-ATR-SIGFOX1 Package</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="_htmresc/mini-st_2020.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="_htmresc/favicon.png" />
+</head>
+<body>
+<div class="row">
+<div class="col-sm-12 col-lg-4">
+<center>
+<h1 id="release-notes-for-fp-atr-sigfox1">Release Notes for <mark>FP-ATR-SIGFOX1</mark></h1>
+<p>Copyright © 2022 STMicroelectronics<br />
+</p>
+<a href="https://www.st.com" class="logo"><img src="_htmresc/st_logo_2020.png" alt="ST logo" /></a>
+</center>
+<h1 id="purpose">Purpose</h1>
+<p><mark>FP-ATR-SIGFOX1</mark> is a STM32Cube Function Pack that lets you read data from GNSS and environmental sensors and send this information via a Sigfox connectivity. Message sending is triggered by either user button pressing, by timer event or by threshold crossing events on environmental values or movement detection by the on-board accelerometer. Thresholds can be set using the ST Asset Tracking mobile app and transmitted to the firmware by Bluetooth Low Energy connectivity.</p>
+<p>The package implements low power profiles and related transitions to ensure long battery autonomy.</p>
+<p>This software together with the suggested combination of STM32 and ST devices is intended particularly to develop asset tracking applications. In addition to GNSS geolocation, Low-energy device geolocation is a service provided by the Sigfox infrastructure.</p>
+<p>The software runs on the STM32 microcontroller and includes drivers for the S2-LP ultra-low power RF transceiver, the Bluetooth, the GNSS and the motion and environmental sensors</p>
+<p>Key features</p>
+<ul>
+<li><p>Complete firmware to connect an IoT node to a Sigfox network and sending environmental sensor data.</p></li>
+<li><p>Drivers for the S2-LP high performance ultra-low power RF transceiver, intended for RF wireless applications in the sub-1 GHz band.</p></li>
+<li><p>Wake-up, tilt and orientation detection by the on-board accelerometer.</p></li>
+<li><p>Middleware library supporting Sigfox connectivity from package X-CUBE-SFXS2LP1 and Bluetooth connectivity from package X-CUBE-BLE1.</p></li>
+<li><p>GNSS location and low-energy device geolocation service provided by the Sigfox infrastructure.</p></li>
+<li><p>Easy portability across different MCU families, thanks to STM32Cube</p></li>
+<li><p>Free, user-friendly license terms</p></li>
+</ul>
+<p><a href=""><img src="_htmresc/FP-ATR-SIGFOX1_Software_Architecture.png" alt="Architecture&gt;" /></a></p>
+<p>Here is the list of references to the user documents:</p>
+<ul>
+<li><p><a href="https://www.st.com/resource/en/user_manual/dm00558101.pdf">UM2506</a>: Getting started with the STM32Cube function pack for IoT tracker node with Sigfox connectivity, Bluetooth connectivity and sensors</p></li>
+<li><p><a href="https://www.st.com/resource/en/user_manual/dm00498153.pdf">UM2405</a>: Getting started with the X-NUCLEO-S2868A1 SUb 1 GHz 868 MHz RF expansion board based on S2-LP radio for STM32 Nucleo</p></li>
+<li><p><a href="https://www.st.com/resource/en/user_manual/dm00656126.pdf">UM2638</a>: Getting started with the X-NUCLEO-S2868A2 SUb 1 GHz 868 MHz RF expansion board based on S2-LP radio for STM32 Nucleo</p></li>
+<li><p><a href="https://www.st.com/resource/en/user_manual/dm00660355.pdf">UM2641</a>: Getting started with the X-NUCLEO-S2915A1 Sub-1 GHz 915 MHz RF expansion board based on S2-LP radio for STM32 Nucleo</p></li>
+<li><p><a href="https://www.st.com/resource/en/user_manual/dm00365435.pdf">UM2173</a>: Getting started with the S2-LP Sigfox firmware, expansion for STM32Cube</p></li>
+<li><p><a href="https://www.st.com/resource/en/user_manual/dm00333132.pdf">UM2121</a>: Getting started with the X-NUCLEO-IKS01A2 motion MEMS and environmental sensor expansion board for STM32</p></li>
+<li><p><a href="https://www.st.com/resource/en/user_manual/dm00601501.pdf">UM2559</a>: Getting started with the X-NUCLEO-IKS01A3 motion MEMS and environmental sensor expansion board for STM32</p></li>
+<li><p><a href="https://www.st.com/resource/en/user_manual/dm00210197.pdf">UM1912</a>: Getting started with X-NUCLEO-IDB05A1 BLE expansion board based on the SPBTLE-RF module for STM32 Nucleo</p></li>
+<li><p><a href="https://www.st.com/resource/en/user_manual/dm00694112.pdf">UM2700</a>: Getting started with X-NUCLEO-IDB05A2 BLE expansion board based on the BlueNRG-M0 module for STM32 Nucleo</p></li>
+<li><p><a href="https://www.st.com/resource/en/user_manual/dm00453103.pdf">UM2327</a>: Getting started with the X-NUCLEO-GNSS1A1 expansion board based on Teseo-LIV3F tiny GNSS module for STM32 Nucleo</p></li>
+</ul>
+</div>
+<section id="update-history" class="col-sm-12 col-lg-8">
+<h1>Update history</h1>
+<div class="collapse">
+<input type="checkbox" id="collapse-section9" checked aria-hidden="true"> <label for="collapse-section9" aria-hidden="true"><strong>V3.2.0 / 1 September 2022</strong></label>
+<div>
+<h2 id="main-changes">Main changes</h2>
+<h3 id="product-update">Product update</h3>
+<p>Aligned to STM32CubeMX pack STMicroelectronics.FP-ATR-SIGFOX1.3.2.0 (minimum required version STM32CubeMX 6.6.0).</p>
+<h2 id="contents">Contents</h2>
+<p><small>The components flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Documentation</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">API description</td>
+<td style="text-align: left;">V3.2.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Documentation\FP-ATR-SIGFOX1.chm">CHM</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Getting Started</td>
+<td style="text-align: left;">V3.1.0</td>
+<td style="text-align: left;"><a href="Documentation\STMicroelectronics.FP-ATR-SIGFOX1_GettingStarted.pdf">PDF</a></td>
+</tr>
+</tbody>
+</table>
+<p>Projects</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Projects</td>
+<td style="text-align: left;">V3.2.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Projects/Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p>Middlewares</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sigfox Library</td>
+<td style="text-align: left;">V2.8.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/Sigfox/Sigfox/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sigfox STM32 Library</td>
+<td style="text-align: left;">V2.8.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/Sigfox/Sigfox_STM32_Library/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BlueNRG-MS</td>
+<td style="text-align: left;">V5.1.2 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Middlewares/ST/BlueNRG-MS/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GNSS Library</td>
+<td style="text-align: left;">V5.0.0</td>
+<td style="text-align: left;"><a href="Middlewares/ST/lib_gnss/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FreeRTOS</td>
+<td style="text-align: left;">V10.3.1</td>
+<td style="text-align: left;"><a href="Middlewares\Third_Party\FreeRTOS\Source\st_readme.txt">st_readme.txt</a></td>
+</tr>
+</tbody>
+</table>
+<p>Drivers</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">STM32L0xx CMSIS</td>
+<td style="text-align: left;">V1.9.2 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32L0xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4xx CMSIS</td>
+<td style="text-align: left;">V1.7.2</td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32L4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L0xx HAL</td>
+<td style="text-align: left;">V1.10.5 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\STM32L0xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4xx HAL</td>
+<td style="text-align: left;">V1.13.2</td>
+<td style="text-align: left;"><a href="Drivers\STM32L4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP X-NUCLEO-S2868A1</td>
+<td style="text-align: left;">V4.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\S2868A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP X-NUCLEO-S2868A2</td>
+<td style="text-align: left;">V4.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\S2868A2\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP X-NUCLEO-S2915A1</td>
+<td style="text-align: left;">V4.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\S2915A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP X-NUCLEO-IKS01A2</td>
+<td style="text-align: left;">V5.3.3 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\IKS01A2\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP X-NUCLEO-IKS01A3</td>
+<td style="text-align: left;">V1.8.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers\BSP\IKS01A3\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP X-NUCLEO-GNSS1A1</td>
+<td style="text-align: left;">V3.4.0</td>
+<td style="text-align: left;"><a href="Drivers\BSP\GNSS1A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p>Components</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">S2-LP</td>
+<td style="text-align: left;">3.0.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/S2LP/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">hts221</td>
+<td style="text-align: left;">5.4.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/hts221/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lps22hb</td>
+<td style="text-align: left;">5.4.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lps22hb/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lps22hh</td>
+<td style="text-align: left;">1.3.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lps22hh/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lsm6dsl</td>
+<td style="text-align: left;">5.4.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lsm6dsl/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lsm6dso</td>
+<td style="text-align: left;">1.6.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lsm6dso/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">stts751</td>
+<td style="text-align: left;">1.2.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/stts751/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Teseo-LIV3F</td>
+<td style="text-align: left;">5.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/teseo_liv3f/Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="known-limitations">Known limitations</h2>
+<ul>
+<li>X-NUCLEO-S2915 works only with project configuration not including Bluetooth.</li>
+<li>Register CallBacks must be enabled for SPI, TIM and UART.</li>
+</ul>
+<h2 id="development-toolchains-and-compilers">Development toolchains and compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.20.1</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.37.0</li>
+<li>STM32CubeIDE V1.9.0</li>
+</ul>
+<h2 id="supported-devices-and-boards">Supported devices and boards</h2>
+<ul>
+<li><a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-l073rz.html">NUCLEO-L073RZ</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-l476rg.html">NUCLEO-L476RG</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-s2868a1.html">X-NUCLEO-S2868A1</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-s2868a2.html">X-NUCLEO-S2868A2</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-s2915a1.html">X-NUCLEO-S2915A1</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-idb05a1.html">X-NUCLEO-IDB05A1</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-idb05a2.html">X-NUCLEO-IDB05A2</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-sense-hw/x-nucleo-iks01a2.html">X-NUCLEO-IKS01A2</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-sense-hw/x-nucleo-iks01a3.html">X-NUCLEO-IKS01A3</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-gnss1a1.html">X-NUCLEO-GNSS1A1</a></li>
+</ul>
+<h2 id="backward-compatibility">Backward compatibility</h2>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><a href="https://www.st.com/en/embedded-software/x-cube-subg2.html">X-CUBE-SUBG2</a></li>
+<li><a href="https://www.st.com/en/embedded-software/x-cube-sfxs2lp1.html">X-CUBE-SFXS2LP1</a></li>
+<li><a href="https://www.st.com/en/embedded-software/x-cube-mems1.html">X-CUBE-MEMS1</a></li>
+<li><a href="https://www.st.com/en/embedded-software/x-cube-gnss1.html">X-CUBE-GNSS1</a></li>
+<li><a href="https://www.st.com/en/embedded-software/x-cube-ble1.html">X-CUBE-BLE1</a></li>
+</ul>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section8" aria-hidden="true"> <label for="collapse-section8" aria-hidden="true"><strong>V3.1.0 / 30 April 2021</strong></label>
+<div>
+<h2 id="main-changes-1">Main changes</h2>
+<h3 id="maintenance-release">Maintenance release</h3>
+<p>General update of Middlewares, Drivers and Components.</p>
+<h2 id="contents-1">Contents</h2>
+<p><small>The components flagged by “<span class="icon-st-update"></span>” have changed since the previous release. “<span class="icon-st-add"></span>” are new.</small></p>
+<p>Documentation</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Doxygen documentation</td>
+<td style="text-align: left;">V3.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0094-t=keywords-page=1">SLA0094</a></td>
+<td style="text-align: left;"><a href="Documentation\FP-ATR-SIGFOX1.chm">CHM</a></td>
+</tr>
+</tbody>
+</table>
+<p>Projects</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">STM32L073RZ-Nucleo/AssetTracker</td>
+<td style="text-align: left;">V3.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0094-t=keywords-page=1">SLA0094</a></td>
+<td style="text-align: left;"><a href="Projects/STM32L073RZ-Nucleo/Applications/Sigfox/AssetTracker/readme.txt">Read Me</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476RG-Nucleo/AssetTracker</td>
+<td style="text-align: left;">V3.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0094-t=keywords-page=1">SLA0094</a></td>
+<td style="text-align: left;"><a href="Projects/STM32L476RG-Nucleo/Applications/Sigfox/AssetTracker/readme.txt">Read Me</a></td>
+</tr>
+</tbody>
+</table>
+<p>Middlewares</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sigfox Library</td>
+<td style="text-align: left;">V2.8.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0044-t=keywords-page=1">SLA0044</a></td>
+<td style="text-align: left;"><a href="Middlewares/ST/Sigfox/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sigfox STM32 Library</td>
+<td style="text-align: left;">V2.8.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0044-t=keywords-page=1">SLA0044</a></td>
+<td style="text-align: left;"><a href="Middlewares/ST/Sigfox_STM32_Library/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BlueNRG-MS</td>
+<td style="text-align: left;">V5.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0044-t=keywords-page=1">SLA0044</a></td>
+<td style="text-align: left;"><a href="Middlewares/ST/BlueNRG-MS/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GNSS Library</td>
+<td style="text-align: left;">V3.2.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0044-t=keywords-page=1">SLA0044</a></td>
+<td style="text-align: left;"><a href="Middlewares/ST/lib_gnss/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FreeRTOS</td>
+<td style="text-align: left;">V10.3.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Middlewares\Third_Party\FreeRTOS\Source\st_readme.txt">st_readme.txt</a></td>
+</tr>
+</tbody>
+</table>
+<p>Drivers</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">STM32L0xx CMSIS</td>
+<td style="text-align: left;">V1.9.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/Apache-2.0">Apache 2.0</a></td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32L0xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4xx CMSIS</td>
+<td style="text-align: left;">V1.7.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/Apache-2.0">Apache 2.0</a></td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32L4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L0xx HAL</td>
+<td style="text-align: left;">V1.10.4 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\STM32L0xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4xx HAL</td>
+<td style="text-align: left;">V1.13.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\STM32L4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP X-NUCLEO-S2868A1</td>
+<td style="text-align: left;">V2.2.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\BSP\S2868A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP X-NUCLEO-S2868A2</td>
+<td style="text-align: left;">V1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\BSP\S2868A2\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP X-NUCLEO-S2915A1</td>
+<td style="text-align: left;">V1.1.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\BSP\S2915A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP X-NUCLEO-IKS01A2</td>
+<td style="text-align: left;">V5.3.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\BSP\IKS01A2\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP X-NUCLEO-IKS01A3</td>
+<td style="text-align: left;">V1.5.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\BSP\IKS01A3\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP X-NUCLEO-GNSS1A1</td>
+<td style="text-align: left;">V3.3.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\BSP\GNSS1A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p>Components</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+<th style="text-align: left;">Release Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">S2-LP</td>
+<td style="text-align: left;">2.1.1 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/S2LP/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">hts221</td>
+<td style="text-align: left;">5.2.3 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/hts221/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lps22hb</td>
+<td style="text-align: left;">5.2.3 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lps22hb/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lps22hh</td>
+<td style="text-align: left;">1.1.2 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lps22hh/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lsm6dsl</td>
+<td style="text-align: left;">5.2.3 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lsm6dsl/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lsm6dso</td>
+<td style="text-align: left;">1.4.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lsm6dso/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">stts751</td>
+<td style="text-align: left;">1.0.2 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/stts751/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Teseo-LIV3F</td>
+<td style="text-align: left;">3.0.0 <span class="icon-st-update"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/teseo_liv3f/Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="known-limitations-1">Known limitations</h2>
+<ul>
+<li>X-NUCLEO-S2915 works only with project configuration not including Bluetooth.</li>
+</ul>
+<h2 id="development-toolchains-and-compilers-1">Development toolchains and compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V8.50.9 + STLink/V2</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.32.0 + ST-LINK/V2</li>
+<li>STM32CubeIDE Version 1.6.1 + ST-LINK/V2</li>
+</ul>
+<h2 id="supported-devices-and-boards-1">Supported devices and boards</h2>
+<ul>
+<li><a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-l073rz.html">NUCLEO-L073RZ</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-l476rg.html">NUCLEO-L476RG</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-s2868a1.html">X-NUCLEO-S2868A1</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-s2868a2.html">X-NUCLEO-S2868A2</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-s2915a1.html">X-NUCLEO-S2915A1</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-idb05a1.html">X-NUCLEO-IDB05A1</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-idb05a2.html">X-NUCLEO-IDB05A2</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-sense-hw/x-nucleo-iks01a2.html">X-NUCLEO-IKS01A2</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-sense-hw/x-nucleo-iks01a3.html">X-NUCLEO-IKS01A3</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-gnss1a1.html">X-NUCLEO-GNSS1A1</a></li>
+</ul>
+<h2 id="backward-compatibility-1">Backward compatibility</h2>
+<h2 id="dependencies-1">Dependencies</h2>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section7" aria-hidden="true"> <label for="collapse-section7" aria-hidden="true"><strong>V3.0.1 / 11 February 2021</strong></label>
+<div>
+<h2 id="main-changes-2">Main Changes</h2>
+<p>Maintenance release.</p>
+<h2 id="contents-2">Contents</h2>
+<p>Documentation</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Doxygen documentation</td>
+<td style="text-align: left;">3.0.0</td>
+<td style="text-align: left;"><a href="https://www.st.com/content/st_com/en/search.html#q=SLA0055-t=resources-page=1">SLA0055</a></td>
+<td style="text-align: left;"><a href="Documentation\FP-ATR-SIGFOX1.chm">CHM</a></td>
+</tr>
+</tbody>
+</table>
+<p>Projects</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th>License D</th>
+<th style="text-align: left;">ocument</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">STM32L073RZ-Nucleo/AssetTracker</td>
+<td style="text-align: left;">3.0.1</td>
+<td><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0077-t=keywords-page=1">SLA0077</a></td>
+<td style="text-align: left;"><a href="Projects/STM32L073RZ-Nucleo/Applications/Sigfox/AssetTracker/readme.txt">Read Me</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476RG-Nucleo/AssetTracker</td>
+<td style="text-align: left;">3.0.1</td>
+<td><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0077-t=keywords-page=1">SLA0077</a></td>
+<td style="text-align: left;"><a href="Projects/STM32L476RG-Nucleo/Applications/Sigfox/AssetTracker/readme.txt">Read Me</a></td>
+</tr>
+</tbody>
+</table>
+<p>Middlewares</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">BlueNRG-MS</td>
+<td style="text-align: left;">3.0.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0044-t=keywords-page=1">SLA0044</a></td>
+<td style="text-align: left;"><a href="Middlewares/ST/BlueNRG-MS/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sigfox STM32 Library</td>
+<td style="text-align: left;">2.7.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0044-t=keywords-page=1">SLA0044</a></td>
+<td style="text-align: left;"><a href="Middlewares/ST/Sigfox_STM32_Library/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sigfox Library</td>
+<td style="text-align: left;">2.7.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0044-t=keywords-page=1">SLA0044</a></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/Sigfox/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GNSS Library</td>
+<td style="text-align: left;">2.1.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0044-t=keywords-page=1">SLA0044</a></td>
+<td style="text-align: left;"><a href="Middlewares/ST/STM32_GNSS/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FreeRTOS</td>
+<td style="text-align: left;">10.0.1</td>
+<td style="text-align: left;"><a href="Middlewares\Third_Party\FreeRTOS\License\license.txt">MIT open source license</a></td>
+<td style="text-align: left;"><a href="Middlewares\Third_Party\FreeRTOS\Source\st_readme.txt">st_readme.txt</a></td>
+</tr>
+</tbody>
+</table>
+<p>Drivers</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">STM32L0xx CMSIS</td>
+<td style="text-align: left;">1.9.0</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32L0xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4xx CMSIS</td>
+<td style="text-align: left;">1.5.1</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32L4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L0xx HAL</td>
+<td style="text-align: left;">1.10.2</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\STM32L0xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4xx HAL</td>
+<td style="text-align: left;">1.10.0</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\STM32L4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP X-NUCLEO-GNSS1A1</td>
+<td style="text-align: left;">2.0.0</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\BSP\X-NUCLEO-GNSS1A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP X-NUCLEO-IKS01A2</td>
+<td style="text-align: left;">5.2.0</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\BSP\X-NUCLEO-IKS01A2\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP X-NUCLEO-IKS01A3</td>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\BSP\X-NUCLEO-IKS01A3\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP X-NUCLEO-S2868A1</td>
+<td style="text-align: left;">1.2.0</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\BSP\X-NUCLEO-S2868A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p>Components</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+<th style="text-align: left;">Release Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">hts221</td>
+<td style="text-align: left;">5.2.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/hts221/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lps22hb</td>
+<td style="text-align: left;">5.2.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lps22hb/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lps22hh</td>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lps22hh/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lsm6dsl</td>
+<td style="text-align: left;">5.2.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lsm6dsl/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lsm6dso</td>
+<td style="text-align: left;">1.2.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lsm6dso/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">stts751</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/stts751/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">S2-LP</td>
+<td style="text-align: left;">1.2.1</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/S2LP/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TeseoIII</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/teseoIII/Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="known-limitations-2">Known Limitations</h2>
+<ul>
+<li>X-NUCLEO-S2915 works only with project configuration not including Bluetooth.</li>
+</ul>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers-2">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V8.50.4 + STLink/V2</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.31.0 + ST-LINK/V2</li>
+<li>STM32CubeIDE Version 1.5.1 + ST-LINK/V2</li>
+</ul>
+<h2 id="supported-devices-and-boards-2">Supported Devices and Boards</h2>
+<ul>
+<li><a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-l073rz.html">NUCLEO-L073RZ</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-l476rg.html">NUCLEO-L476RG</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-s2868a1.html">X-NUCLEO-S2868A1</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-s2868a2.html">X-NUCLEO-S2868A2</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-s2915a1.html">X-NUCLEO-S2915A1</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-idb05a1.html">X-NUCLEO-IDB05A1</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-sense-hw/x-nucleo-iks01a2.html">X-NUCLEO-IKS01A2</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-sense-hw/x-nucleo-iks01a3.html">X-NUCLEO-IKS01A3</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-gnss1a1.html">X-NUCLEO-GNSS1A1</a></li>
+</ul>
+<h2 id="backward-compatibility-2">Backward Compatibility</h2>
+<p>None</p>
+<h2 id="dependencies-2">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section6" aria-hidden="true"> <label for="collapse-section6" aria-hidden="true"><strong>V3.0.0 / 20 February 2020</strong></label>
+<div>
+<h2 id="main-changes-3">Main Changes</h2>
+<p>Added support to GNSS expansion board.</p>
+<h2 id="contents-3">Contents</h2>
+<p>Documentation</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Doxygen documentation</td>
+<td style="text-align: left;">3.0.0</td>
+<td style="text-align: left;"><a href="https://www.st.com/content/st_com/en/search.html#q=SLA0055-t=resources-page=1">SLA0055</a></td>
+<td style="text-align: left;"><a href="Documentation\FP-ATR-SIGFOX1.chm">CHM</a></td>
+</tr>
+</tbody>
+</table>
+<p>Projects</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: center;">Version</th>
+<th style="text-align: center;">License</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">STM32L073RZ-Nucleo/AssetTracker</td>
+<td style="text-align: center;">3.0.0</td>
+<td style="text-align: center;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0077-t=keywords-page=1">SLA0077</a></td>
+<td style="text-align: left;"><a href="Projects/STM32L073RZ-Nucleo/Applications/Sigfox/AssetTracker/readme.txt">Read Me</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476RG-Nucleo/AssetTracker</td>
+<td style="text-align: center;">3.0.0</td>
+<td style="text-align: center;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0077-t=keywords-page=1">SLA0077</a></td>
+<td style="text-align: left;"><a href="Projects/STM32L476RG-Nucleo/Applications/Sigfox/AssetTracker/readme.txt">Read Me</a></td>
+</tr>
+</tbody>
+</table>
+<p>Middlewares</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">BlueNRG-MS</td>
+<td style="text-align: left;">3.0.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0044-t=keywords-page=1">SLA0044</a></td>
+<td style="text-align: left;"><a href="Middlewares/ST/BlueNRG-MS/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sigfox STM32 Library</td>
+<td style="text-align: left;">2.7.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0044-t=keywords-page=1">SLA0044</a></td>
+<td style="text-align: left;"><a href="Middlewares/ST/Sigfox_STM32_Library/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sigfox Library</td>
+<td style="text-align: left;">2.7.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0044-t=keywords-page=1">SLA0044</a></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/Sigfox/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>GNSS Library</strong></td>
+<td style="text-align: left;">2.1.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/content/st_com/en/search.html#q=SLA0044-t=keywords-page=1">SLA0044</a></td>
+<td style="text-align: left;"><a href="Middlewares/ST/STM32_GNSS/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>FreeRTOS</strong></td>
+<td style="text-align: left;">10.0.1</td>
+<td style="text-align: left;"><a href="Middlewares\Third_Party\FreeRTOS\License\license.txt">MIT open source license</a></td>
+<td style="text-align: left;"><a href="Middlewares\Third_Party\FreeRTOS\Source\st_readme.txt">st_readme.txt</a></td>
+</tr>
+</tbody>
+</table>
+<p>Drivers</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+<th style="text-align: left;">Document</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">STM32L0xx CMSIS</td>
+<td style="text-align: left;">1.9.0</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32L0xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4xx CMSIS</td>
+<td style="text-align: left;">1.5.1</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\CMSIS\Device\ST\STM32L4xx\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L0xx HAL</td>
+<td style="text-align: left;">1.10.2</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\STM32L0xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4xx HAL</td>
+<td style="text-align: left;">1.10.0</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\STM32L4xx_HAL_Driver\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>BSP X-NUCLEO-GNSS1A1</strong></td>
+<td style="text-align: left;">2.0.0</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\BSP\X-NUCLEO-GNSS1A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP X-NUCLEO-IKS01A2</td>
+<td style="text-align: left;">5.2.0</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\BSP\X-NUCLEO-IKS01A2\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP X-NUCLEO-IKS01A3</td>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\BSP\X-NUCLEO-IKS01A3\Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP X-NUCLEO-S2868A1</td>
+<td style="text-align: left;">1.2.0</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td style="text-align: left;"><a href="Drivers\BSP\X-NUCLEO-S2868A1\Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p>Components</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+<th style="text-align: left;">Release Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">hts221</td>
+<td style="text-align: left;">5.2.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/hts221/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lps22hb</td>
+<td style="text-align: left;">5.2.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lps22hb/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lps22hh</td>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lps22hh/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lsm6dsl</td>
+<td style="text-align: left;">5.2.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lsm6dsl/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lsm6dso</td>
+<td style="text-align: left;">1.2.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/lsm6dso/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">stts751</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/stts751/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">S2-LP</td>
+<td style="text-align: left;">1.2.1</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/S2LP/Release_Notes.html">Release Notes</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>TeseoIII</strong></td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;"><a href="http://www.st.com/software_license_agreement_liberty_v2">MCD-ST Liberty SW License V2</a></td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/teseoIII/Release_Notes.html">Release Notes</a></td>
+</tr>
+</tbody>
+</table>
+<p>Note: in the tables above, components <strong>highlighted</strong> have changed since previous release.</p>
+<h2 id="known-limitations-3">Known Limitations</h2>
+<ul>
+<li>X-NUCLEO-S2915 works only with project configuration not including Bluetooth.</li>
+</ul>
+<p><br />
+</p>
+<h2 id="development-toolchains-and-compilers-3">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V8.32.3 + STLink/V2</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.27.1 + ST-LINK/V2</li>
+<li>STM32CubeIDE Version 1.1.0 + ST-LINK/V2</li>
+</ul>
+<h2 id="supported-devices-and-boards-3">Supported Devices and Boards</h2>
+<ul>
+<li><a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-l073rz.html">NUCLEO-L073RZ</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-l476rg.html">NUCLEO-L476RG</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-s2868a1.html">X-NUCLEO-S2868A1</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-s2868a2.html">X-NUCLEO-S2868A2</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-s2915a1.html">X-NUCLEO-S2915A1</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-idb05a1.html">X-NUCLEO-IDB05A1</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-sense-hw/x-nucleo-iks01a2.html">X-NUCLEO-IKS01A2</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-sense-hw/x-nucleo-iks01a3.html">X-NUCLEO-IKS01A3</a></li>
+<li><a href="https://www.st.com/content/st_com/en/products/ecosystems/stm32-open-development-environment/stm32-nucleo-expansion-boards/stm32-ode-connect-hw/x-nucleo-gnss1a1.html">X-NUCLEO-GNSS1A1</a></li>
+</ul>
+<h2 id="backward-compatibility-3">Backward Compatibility</h2>
+<p>None</p>
+<h2 id="dependencies-3">Dependencies</h2>
+<p>None</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section5" aria-hidden="true"> <label for="collapse-section5" aria-hidden="true"><strong>V2.1.1 / 25 July 2019</strong></label>
+<div>
+<p>Bug fix.</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section4" aria-hidden="true"> <label for="collapse-section4" aria-hidden="true"><strong>V2.1.0 / 15 July 2019</strong></label>
+<div>
+<p>Added support to X-NUCLEO-IKS01A3.</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section3" aria-hidden="true"> <label for="collapse-section3" aria-hidden="true"><strong>V2.0.1 / 7 June 2019</strong></label>
+<div>
+<p>Bug fix.</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section2" aria-hidden="true"> <label for="collapse-section2" aria-hidden="true"><strong>V2.0.0 / 24 May 2019</strong></label>
+<div>
+<p>Added Bluetooth Low Energy</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section1" aria-hidden="true"> <label for="collapse-section1" aria-hidden="true"><strong>V1.0.0 / 16 October 2018</strong></label>
+<div>
+<p>First release</p>
+</div>
+</div>
+</section>
+</div>
+<footer class="sticky">
+<div class="columns">
+<div class="column" style="width:95%;">
+<p>For complete documentation on <strong>FP-ATR-SIGFOX1</strong>, visit: <a href="https://www.st.com/en/embedded-software/fp-atr-sigfox1.html">www.st.com</a></p>
+</div><div class="column" style="width:5%;">
+<p><abbr title="Based on template cx566953 version 2.0">Info</abbr></p>
+</div>
+</div>
+</footer>
+</body>
+</html>

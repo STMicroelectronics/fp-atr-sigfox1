@@ -1,5 +1,8 @@
 # FP-ATR-SIGFOX1 Firmware Package
 
+> [!NOTE]
+>## FP-ATR-SIGFOX1 Function Pack is now deprecated and this repository is not maintained anymore.
+
 FP-ATR-SIGFOX1 is a STM32Cube Function Pack that lets you read data from GNSS and environmental sensors and send this information via a Sigfox connectivity. Message sending is triggered by either user button pressing, by timer event or by threshold crossing events on environmental values or movement detection by the on-board accelerometer. Thresholds can be set using the ST Asset Tracking mobile app and transmitted to the firmware by Bluetooth Low Energy connectivity.
 
 The package implements low power profiles and related transitions to ensure long battery autonomy.
